@@ -1,3 +1,5 @@
+//Worked with Josh Hight on this
+
 $(document).ready(function () {
 
   console.log("hello");
@@ -32,9 +34,9 @@ $(document).ready(function () {
     getWeatherData: function (zipcode) {
         
       let zip = $("#zip").val().trim();  
-      let url = "http://api.openweathermap.org/data/2.5/weather?zip=" + zip + ",us&appid=" + weatherApp.weatherApiKey + "&units=imperial";
+      //let url = "http://api.openweathermap.org/data/2.5/weather?zip=" + zip + ",us&appid=" + weatherApp.weatherApiKey + "&units=imperial";
 
-      //var url = "testData/test.json"
+      let url = "testData/test.json"
 
       $.getJSON(url, function (data) {
           console.log (data);
@@ -88,9 +90,9 @@ $(document).ready(function () {
     },
 
     getFiveDayWeather: function () {
-      let url = "//api.openweathermap.org/data/2.5/forecast?lat=" + weatherApp.lastLatitiude + "&lon=" + weatherApp.lastLongitude + "&appid=" + weatherApp.weatherApiKey + "&units=imperial";
+      //let url = "//api.openweathermap.org/data/2.5/forecast?lat=" + weatherApp.lastLatitiude + "&lon=" + weatherApp.lastLongitude + "&appid=" + weatherApp.weatherApiKey + "&units=imperial";
 
-      //var url = "testData/test5day.json"
+      let url = "testData/test5day.json"
         
       $.getJSON(url, function (data) {
         var $target = $("#5day")
